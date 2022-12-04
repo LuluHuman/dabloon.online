@@ -1,0 +1,10 @@
+{
+    "tiktok":{
+        "appId": "",
+        "clientKey": "",
+        "clientSecret": ""
+    },
+    "mongodb":{
+        "uri": ""
+    }
+}

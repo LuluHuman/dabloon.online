@@ -1,0 +1,143 @@
+/* loading */
+.loader {
+  position: relative;
+  margin: 0px auto;
+  width: 100px;
+  height: 100px;
+  zoom: 1;
+}
+
+.circular {
+ animation: rotate 1s linear infinite;
+ height: 100px;
+ position: relative;
+ width: 100px;
+}
+
+
+.path {
+  stroke: gray;
+  stroke-dasharray: 1,200;
+  stroke-dashoffset: 0;
+  animation: dash 1.5s ease-in-out infinite;
+  stroke-linecap: round;
+}
+
+@keyframes rotate {
+ 100%{
+  transform: rotate(360deg);
+ }
+}
+@keyframes dash{
+ 0%{
+  stroke-dasharray: 1,200;
+  stroke-dashoffset: 0;
+ }
+ 50%{
+  stroke-dasharray: 89,200;
+  stroke-dashoffset: -35;
+ }
+ 100%{
+  stroke-dasharray: 89,200;
+  stroke-dashoffset: -124;
+ }
+}
+/* ... */
+a {
+  color: #555;
+  text-decoration: none;
+}
+
+body {
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 50px;
+  font-family: sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 0.5vw;
+  height: 0;
+}
+
+::-webkit-scrollbar-track {
+  background: #00000000;
+  position: fixed;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  width: 1vw;
+}
+
+.info {
+  font-size: 50px;
+  display: flex;
+  flex-direction: column;
+  background-color: #187795;
+  color: white;
+  padding: 40px;
+  margin-top: 66px;
+}
+.welcome-message {
+  font-size: 90px;
+  text-align: center;
+  margin-bottom: 40px;
+  border-bottom: white 10px dotted;
+}
+
+.main-body {
+  min-height: 100vh;
+  margin-top: 14vh !important;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 50px;
+  font-family: monospace;
+}
+
+.notices-text {
+  text-align: center;
+  margin-bottom: 2vh;
+}
+
+.notices {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url(/images/notice_migrate.webp);
+  height: 400px;
+  width: 100%;
+}
+
+.notices .info-message {
+  font-size: 40px;
+  background-color: #000000aa;
+}
+
+.small-text {
+  font-size: 2vh;
+}
+.medium-text {
+  font-size: 4vh;
+}
+
+.currency{
+  display: flex;
+  align-items: center;
+  color: green;
+  justify-content: center;
+}
+.currency > img{
+  height: 90%;
+  margin: 0 510x;
+}

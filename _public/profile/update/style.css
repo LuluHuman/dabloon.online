@@ -1,0 +1,8 @@
+input, select, option, button{
+    font-size: 25px !important;
+    margin: 10px;
+}
+
+.small-text{
+    font-size: 20px;
+}

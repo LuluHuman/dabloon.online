@@ -1,0 +1,142 @@
+.main-body {
+  width: 50vw;
+}
+
+#mainprofile {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#mainprofile > div {
+  padding: 20px;
+}
+
+#mainprofile > div:nth-child(1) > img {
+  border-radius: 200px;
+  border: 1px grey solid;
+  width: 10vw;
+}
+#mainprofile > div:nth-child(2) {
+  font-size: 3vh;
+}
+
+.edit-a {
+  border: 1px black solid;
+  font-size: 2vh;
+  padding: 2px;
+}
+
+.a-tiktokprof {
+  border: 1px black solid;
+  margin: 20px 0px;
+  width: fit-content;
+  font-size: 3vh;
+  background: none;
+  display: flex;
+  align-items: center;
+  padding: 0px 10px 0px 0px;
+}
+
+.userBefore::before {
+  content: "\e7fd";
+  font-family: "Material Symbols Outlined";
+  margin: 10px;
+}
+
+.tradeBefore::before {
+  content: "\ea18";
+  font-family: "Material Symbols Outlined";
+  margin: 10px;
+}
+
+.copyBefore::before {
+  content: "\e14d";
+  font-family: "Material Symbols Outlined";
+  margin: 10px;
+}
+
+#items-ol {
+  font-size: 3vh;
+}
+
+#share {
+  padding: 10px;
+  margin: 0px 10px;
+}
+
+#tradeMenu {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-color: #00000080;
+  display: flex;
+  justify-content: center;
+}
+
+#tradeMenu > div {
+  background-color: white;
+  padding: 30px;
+  overflow: scroll;
+}
+
+.collum-trade {
+  display: flex;
+}
+.collum-trade > div:nth-child(1) {
+  width: 30vw;
+}
+.collum-trade > div:nth-child(2) {
+  width: 20vw;
+}
+
+.trade-offer > div,
+.trade-offer > input {
+  margin: 25px;
+  padding: 0;
+  background-color: #aaa;
+  border-radius: 10px;
+  height: 5vh;
+  width: 80%;
+  font-size: 4vh;
+  border: none;
+  cursor: pointer;
+}
+
+.collum-trade > div:nth-child(2) > button {
+  margin: 25px;
+  padding: 0;
+  background-color: #187795;
+  color: white;
+  border-radius: 10px;
+  height: 5vh;
+  width: 80%;
+  font-size: 4vh;
+  border: none;
+}
+
+.items-trade {
+  font-size: 3vh;
+}
+
+.button-close {
+  font-size: 4vh;
+  width: 7vh;
+  height: 7vh;
+  border: black solid;
+  background: white;
+  left: 0;
+  top: 0;
+  margin: 14px;
+}
+
+#toast{
+      position: fixed;
+    background-color: hwb(110deg 38% 1%);
+    color: white;
+    width: 100vw;
+    text-align: center;
+    padding: 5px;
+    top: -10vh;
+    transition: 0.5s;
+}

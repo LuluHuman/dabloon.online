@@ -1,0 +1,63 @@
+select {
+  font-size: 3vh;
+  background-color: none;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+
+.items-pannel > div {
+  margin: 25px;
+  padding: 0;
+  background-color: #aaa;
+  border-radius: 10px;
+  height: 5vh;
+  width: 80%;
+  font-size: 4vh;
+  border: none;
+  cursor: pointer;
+}
+
+.a-trade-request-lmao > div {
+  display: flex;
+  align-items: center;
+}
+
+.a-trade-request-lmao > div > img {
+  margin: 0 20px;
+  width: 50px;
+  border-radius: 100px;
+  outline: black 1px solid;
+}
+
+.conf {
+  flex-direction: column;
+}
+
+.conf > div {
+  display: flex;
+  justify-content: space-between;
+  width: 82%;
+}
+
+.conf > div > button:nth-child(1){
+    background-color: green;
+}
+
+
+.conf > div > button:nth-child(2){
+    background-color: red;
+}
+
+.conf-button {
+  width: 40%;
+  font-size: 3vh;
+  color: white;
+  border-radius: 10px;
+}
+
+.arrow-trade{
+  font-size: 2vh;
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,31 @@
+#top-stories {
+  border: grey solid 1px;
+  border-radius: 50px;
+  width: 40vw;
+  padding: 20px;
+  margin: 20px;
+  font-size: 3vh;
+}
+
+.news-cont {
+  display: flex;
+  justify-content: space-between;
+}
+
+.news-cont > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.summ {
+  color: gray;
+  font-size: 2.5vh;
+}
+.news-cont > div > .src{
+  font-size: 2w.5vh;
+}
+
+.news-cont > img {
+  height: 10vh;
+  width: 10vh;  
+}

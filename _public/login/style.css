@@ -1,0 +1,13 @@
+label {
+  font-size: 20px;
+}
+
+#warning {
+  font-size: 15px;
+  color: red;
+}
+.login {
+  width: 40%;
+  text-align: center;
+  margin-top: 66px;
+}

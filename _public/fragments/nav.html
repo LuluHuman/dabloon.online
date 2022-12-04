@@ -1,0 +1,287 @@
+<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+    .material-symbols-outlined {
+        font-size: 3vh;
+        font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 48
+    }
+
+    .login {
+        padding: 0px;
+        background-color: #00000000;
+        outline: 0px;
+        border: 0;
+    }
+
+    .navbar-item {
+        height: 7vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        padding: 0 2vw;
+        font-size: 2vh;
+        background-color: #00000000;
+        border: none;
+    }
+
+    .navbar-item:hover,
+    .navbar-item:active {
+        background-color: #fac748;
+    }
+
+    .top-nav {
+        font-size: 0px;
+        display: flex;
+        text-align: left;
+        width: 100vw;
+        padding: 0px 5px;
+        position: relative;
+        align-items: center;
+        flex-direction: row;
+        background-color: #2589BD;
+        height: 7vh;
+        justify-content: center;
+    }
+
+    .logo_nav {
+        width: 100%;
+        height: inherit;
+    }
+
+    .nav_login {
+        font-size: 3vh;
+        color: white;
+        background-color: #fac748;
+        border-radius: 29px;
+        transition: 0.5s;
+        padding: 0.1vw 3vw;
+    }
+
+    .nav_login:hover,
+    .nav_login:active {
+        text-decoration: underline;
+        background-color: #8390FA;
+        transition: 0.5s;
+    }
+
+    .nav_half {
+        display: flex;
+        align-items: center;
+        width: 50%;
+        height: 100%;
+        padding: 0px 15px;
+    }
+
+    .nav_left {
+        justify-content: flex-start;
+    }
+
+    .nav_right {
+        justify-content: flex-end;
+    }
+
+    #menu_mini {
+        width: 100vw;
+        height: fit-content;
+        position: fixed;
+        margin-top: 7vh;
+        left: 0;
+        background-color: #fff;
+        display: none;
+    }
+
+    #menu_mini .navbar-item {
+        color: black;
+        justify-content: left;
+        padding-left: 20px;
+    }
+
+    ul>a {
+
+        padding: 5px 10px;
+        display: flex;
+        align-items: center;
+    }
+
+    #avatar>img {
+        height: 90%;
+        border-radius: 100px;
+    }
+
+    #profileDrop {
+        position: fixed;
+        font-size: 25px !important;
+        color: black;
+        padding: 10px 20px;
+        top: 7vh;
+        justify-content: center;
+        flex-direction: column;
+        box-shadow: 0 0 3px;
+        border-radius: 5px;
+        display: none;
+    }
+
+    #profileDrop>button {
+        display: flex;
+        align-items: center;
+        margin: 5px;
+        background: none;
+        border: none;
+        font-size: 25px !important;
+    }
+
+    #profileDrop>button>span {
+        padding: 2px;
+    }
+</style>
+
+<nav class="top-nav">
+    <ul class="nav_half nav_left">
+        <a href="/" style="height: 80%;"><img src="/images/Logo_expanded.png" class="logo_nav"></a>
+        <div id="buttons">
+            <a href="/shop" class="navbar-item">
+                <span class="material-symbols-outlined">
+                    local_mall
+                </span>
+                <span>Shop</span>
+            </a>
+            <a href="/news" class="navbar-item">
+                <span class="material-symbols-outlined">
+                    newspaper
+                </span>
+                <span>News</span>
+            </a>
+            <a href="/leaderboard" class="navbar-item">
+                <span class="material-symbols-outlined">
+                    workspace_premium
+                </span>
+                <span>Leaderboard</span>
+            </a>
+        </div>
+        <div id="buttons_mini">
+            <button class="navbar-item">
+                <span class="material-symbols-outlined">
+                    arrow_drop_down
+                </span>
+            </button>
+            <div id="menu_mini">
+                <a href="/shop" class="navbar-item">
+                    <span class="material-symbols-outlined">
+                        local_mall
+                    </span>
+                    <span>Shop</span>
+                </a>
+                <a href="/news" class="navbar-item">
+                    <span class="material-symbols-outlined">
+                        newspaper
+                    </span>
+                    <span>News</span>
+                </a>
+                <a href="/leaderboard" class="navbar-item">
+                    <span class="material-symbols-outlined">
+                        workspace_premium
+                    </span>
+                    <span>Leaderboard</span>
+                </a>
+            </div>
+        </div>
+    </ul>
+    <ul class="nav_half nav_right" id="avatar">
+        <a href="/login" class="nav_login">Log in</a>
+        <img style="display: none;">
+        <div id="profileDrop">
+            <button onclick="window.viewProfile()"><span class="material-symbols-outlined">person</span><span>View
+                    Profile</span></button>
+            <button onclick="window.logout()"><span
+                    class="material-symbols-outlined">logout</span><span>Logout</span></button>
+        </div>
+    </ul>
+</nav>
+
+<script>
+    window.viewProfile = async function () {
+        window.location.href = "/profile"
+    }
+
+
+    window.logout = async function () {
+        const data = await fetch('/endsession', { method: 'DELETE' }).then(response => response.json())
+        window.location.href = window.location.href
+    }
+
+    //Resize against small-width devices
+    const miniArrow = document.getElementById("buttons_mini").children[0]
+    const menuMini = document.getElementById("menu_mini")
+
+    miniArrow.addEventListener('click', function () {
+        if (menuMini.style.display == "none") {
+            menuMini.style.display = "block"
+        } else {
+            menuMini.style.display = "none"
+        }
+    })
+
+    function checkWidth() {
+        const buttons = document.getElementById("buttons")
+        const buttonsMini = document.getElementById("buttons_mini")
+        const windowRatio = window.innerWidth / window.innerHeight
+        if (windowRatio < 0.80) {
+            buttons.style.display = "none"
+            buttonsMini.style.display = "flex"
+            return
+        }
+
+        if (windowRatio < 1.5) {
+            buttons.style.display = "flex"
+            buttonsMini.style.display = "none"
+            const children = buttons.children
+            for (const i in children) {
+                const element = children[i];
+                if (typeof (element) == "object") {
+                    element.children[1].style.display = "none"
+                }
+            }
+            return
+        }
+
+        buttons.style.display = "flex"
+        buttonsMini.style.display = "none"
+        const children = buttons.children
+        for (const i in children) {
+            const element = children[i];
+            if (typeof (element) == "object") {
+                element.children[1].style.display = "block"
+            }
+        }
+    }
+    checkWidth()
+    window.addEventListener("resize", checkWidth);
+
+    //Get user from api
+    async function getAvatar() {
+        const avatarCont = document.getElementById("avatar")
+        const profileDrop = document.getElementById("profileDrop")
+        const response = await fetch("/api/getprofile?only=avatar_url")
+        if (response.status == 200) {
+            avatarCont.children[0].style.display = "none"
+            avatarCont.children[1].style.display = "block"
+            const imageUrl = await response.json()
+            avatarCont.children[1].src = imageUrl["avatar_url"]
+            avatarCont.onclick = () => {
+                if (profileDrop.style.display == "none"){
+                    profileDrop.style.display = "flex"
+                }else{
+                    profileDrop.style.display = "none"
+                }
+            }
+        }
+    }
+
+    getAvatar()
+</script>

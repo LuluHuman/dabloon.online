@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+    <script src="https://kit.fontawesome.com/796019b116.js" crossorigin="anonymous"></script>
+
+    <title>Dabloon Wallet - Trade</title>
+</head>
+
+<body>
+    <noscript>Javascript required</noscript>
+    <frag style="position: fixed;" fragurl="/fragments/nav.html">
+        <!-- Load from /fragments/nav.html -->
+    </frag>
+
+    <div class="main-body">
+        <div>
+            <strong class="medium-text">Trades</strong>
+            <select id="trades-select">
+                <option>
+                    <span>Inbound</span>
+                </option>
+                <option>
+                    <span>Outbound</span>
+                </option>
+            </select>
+        </div>
+        <a href="/help/how-to-trade" class="small-text">How do i trade?</a>
+        <div id="list-of-trades-smirk-lmao">
+           
+        </div>
+    </div>
+
+    <frag class="footer" fragurl="/fragments/footer.html">
+        <!-- Load from  /fragments/footer.html-->
+    </frag>
+    <script src="/loader.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
